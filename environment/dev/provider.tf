@@ -5,6 +5,12 @@ terraform {
       version = "4.0.0"
     }
   }
+  backend "azurerm" {
+    resource_group_name   = "mk-rg"
+    storage_account_name  = "alienddisk29"
+    container_name        = "tfstate"
+    key                   = "terraform.tfstate"
+  }
 }
 
 
